@@ -2,13 +2,15 @@
 
 {% block content %}
 <h1>Editar reserva</h1>
+
+{% if message %}
+<div class="alert alert-danger" role="alert">
+    {{message}}
+</div>
+{% endif %}
+
 <form action="" method="post">
     {% csrf_token%}
-    </div>
-    <div class="alert alert-danger" role="alert">
-        {{message}}
-    </div>
-
     <div class="row">
         <div class="col-md-2">
             Fecha actual de entrada
